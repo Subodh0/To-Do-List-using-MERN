@@ -29,12 +29,12 @@ export const toggleToDoDone = async(request, response) =>{
     try {
         const todoRef = await todo.findById(request.params.id)
 
-        const todo = await todo.findOneAndUpdate(
+        const todo_ = await todo.findOneAndUpdate(
             { _id: request.params.id },
             { done: !todoRef.done } 
         )
-        await todo.save();
-        return response.status(200).json(todo);
+        await todo_.save();
+        return response.status(200).json(todo_);
     }catch(error){
         return response.status(500).json(error.message)
     }
