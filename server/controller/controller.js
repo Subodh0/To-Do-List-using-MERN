@@ -51,3 +51,12 @@ export const updateTodo = async(request, response) =>{
         return response.status(500).json(error.message)
     }
 }
+export const deleteTodo = async(request, response) =>{
+    try {
+        const todo_ = await todo.findByIdAndDelete(request.params.id)
+        
+        return response.status(200).json(todo_);
+    }catch(error){
+        return response.status(500).json(error.message)
+    }
+}

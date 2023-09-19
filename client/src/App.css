@@ -49,3 +49,20 @@ article {
   border: none;
   border-bottom: 2px solid #FFFFFF;
 }
+
+.button {
+  font-size: 14px;  
+  margin: 0 10px;
+  padding: 10px;
+  color: #6c6777;
+  background-color: #FFF;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.button.selected {
+  color: #ffffff;
+  background-color: #6c6777
+}

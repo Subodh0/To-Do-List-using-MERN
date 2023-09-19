@@ -1,6 +1,8 @@
-import { toggleTodo, updateTodo } from "../redux/actions/index";
+import { toggleTodo, updateTodo, deleteTodo } from "../redux/actions/index";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+
+
 
 const TODO = ({todo}) => {
     
@@ -36,7 +38,7 @@ const TODO = ({todo}) => {
                 />
             </form>
 
-            <span className="icon">
+            <span className="icon" onClick={()=>dispatch(deleteTodo(todo._id))}>
                 <i className="fas fa-trash" />
             </span>
             <span className="icon" onClick={()=>setEditing(preState=>!preState)}>
