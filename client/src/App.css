@@ -40,3 +40,12 @@ input{
 article {
   display: grid;
 }
+
+.edit-todo {
+  width: 80%;
+  font-size: 15px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFFFFF;
+}

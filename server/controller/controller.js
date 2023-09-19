@@ -39,3 +39,15 @@ export const toggleToDoDone = async(request, response) =>{
         return response.status(500).json(error.message)
     }
 }
+export const updateTodo = async(request, response) =>{
+    try {
+        await todo.findOneAndUpdate(
+            { _id: request.params.id },
+            { data: request.body.data }
+        )
+        const todo_ = await todo.findById(request.params.id)
+        return response.status(200).json(todo_);
+    }catch(error){
+        return response.status(500).json(error.message)
+    }
+}
