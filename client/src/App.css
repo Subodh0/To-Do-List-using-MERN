@@ -60,9 +60,16 @@ article {
   cursor: pointer;
   width: 100px;
   border-radius: 5px;
+  margin-top: 15px;
 }
 
 .button.selected {
   color: #ffffff;
   background-color: #6c6777
+}
+.button.clear { 
+  color: #FFF;
+  background-color: #ee1630;
+  float: right;
+  width: 150px;
 }

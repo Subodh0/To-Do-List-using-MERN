@@ -6,7 +6,7 @@ import { tabReducers } from './reducers/tabReducers';
 
 const reducer = combineReducers({
     todos: todoReducers,
-    currentTabs: tabReducers
+    currentTab: tabReducers
 })
 
 

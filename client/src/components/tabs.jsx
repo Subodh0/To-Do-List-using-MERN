@@ -8,7 +8,7 @@ const Tabs = ( { currentTab }) =>{
     return (
         TABS.map(tab=>(
             <button
-                className={ tab === currentTab ? 'button' : 'button selected'  }
+                className={ tab === currentTab ? 'button selected' : 'button'  }
                 onClick={()=> dispatch(toggleTab(tab))}
             >
                 {tab}
